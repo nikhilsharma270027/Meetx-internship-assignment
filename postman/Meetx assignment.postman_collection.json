@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "afd75b3d-b73b-4bff-8df9-22260963302a",
+		"name": "Meetx assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29274665",
+		"_collection_link": "https://speeding-star-332850.postman.co/workspace/My-Workspace~a4b9179e-3bac-41c1-8b4e-33a4fd67a8cc/collection/29274665-afd75b3d-b73b-4bff-8df9-22260963302a?action=share&source=collection_link&creator=29274665"
+	},
+	"item": [
+		{
+			"name": "/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nikhil\",\r\n    \"email\": \"123456@gmail.com\",\r\n    \"phone\": \"1234567890\",\r\n    \"password\": \"N12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/login",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"n3@gmail.com\",\r\n    \"password\": \"N12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/activities/allactivites",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/activities/allactivites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"activities",
+						"allactivites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/bookings/book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJpZCI6IjY4MWI4MTc1YWU1NGI2MWFhNmQyMjNlNyIsImVtYWlsIjoibjJAZ21haWwuY29tIiwiaWF0IjoxNzQ2NjM3MDc4LCJleHAiOjE3NDY3MjM0Nzh9",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"activityId\": \"681b8b25bb3fca5a1b335534\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bookings/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bookings",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/bookings/my-bookings",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/bookings/my-bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bookings",
+						"my-bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
