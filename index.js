@@ -1,13 +1,11 @@
 import dotenv from "dotenv";
 dotenv.config();
 import express from 'express';
-import mongoose from 'mongoose';
 import cors from 'cors';
 
 // Import routes
 import authRoutes from './routes/User.route.js'
 import cookieParser from "cookie-parser";
-import AuthMiddleware from './middleware/AuthMiddleware.js';
 import activityRoutes from './routes/Activity.route.js';
 import bookingRoutes from './routes/booking.routes.js';
 import connectDB from "./config/db.js";
@@ -25,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 // Authentication middleware
-app.use(AuthMiddleware);
+// app.use(AuthMiddleware);
 
 // Routes
 app.use('/api/auth', authRoutes);
